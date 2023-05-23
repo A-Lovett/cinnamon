@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/A-Lovett/cinnamon/compare/v1.0.0...v1.1.0) (2023-05-23)
+
+
+### Features
+
+* added boot menu ([8624104](https://github.com/A-Lovett/cinnamon/commit/862410473ffa141005c9e005e2c61b4f8a9a1b00))
+
 ## 1.0.0 (2023-05-23)
 
 
