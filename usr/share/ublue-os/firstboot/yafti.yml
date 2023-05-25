@@ -36,11 +36,9 @@ screens:
           description: Core applications
           default: true
           packages:
-          - Backup: org.gnome.DejaDup
           - Calculator: org.gnome.Calculator
           - Celluloid Video Player: io.github.celluloid_player.Celluloid
           - Disk Usage Analyzer: org.gnome.baobab
-          - Photo Organizer: org.gnome.Shotwell
           - Fedora Media Writer: org.fedoraproject.MediaWriter
           - Flatseal Permissions Manager: com.github.tchx84.Flatseal
           - Google Chrome: com.google.Chrome

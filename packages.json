@@ -2,11 +2,11 @@
     "all": {
         "include": {
             "all": [
+                "backintime-gnome",
                 "docker",
                 "gnome-boxes",
                 "gnome-software",
                 "python3-pip",
-                "timeshift",
                 "touchegg",
                 "xdotool",
 

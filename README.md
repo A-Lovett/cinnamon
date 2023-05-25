@@ -8,11 +8,11 @@
 
 To try it:
 
-    rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/cinnamon-main:38
+    rpm-ostree rebase ostree-unverified-registry:ghcr.io/a-lovett/cinnamon-main:38
 
 or if you have an NVIDIA GPU:
 
-    rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/cinnamon-nvidia:38
+    rpm-ostree rebase ostree-unverified-registry:ghcr.io/a-lovett/cinnamon-nvidia:38
 
 ## Caveats
 
