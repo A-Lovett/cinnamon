@@ -1,7 +1,7 @@
 alias code='flatpak run com.visualstudio.code'
 alias google-chrome='flatpak run com.google.Chrome'
 
-alias rb='systemctl reboot'
+alias lock='cinnamon-screensaver-command --lock'
 
 #Shortcut for 'docker run -it --rm <image> <optional additional args>
 #Run as 'drun <image> <optional additional args>'
