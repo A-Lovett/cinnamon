@@ -97,3 +97,9 @@ gsettings set org.cinnamon panel-zone-symbolic-icon-sizes "'[{\"panelId\": 1, \"
 gsettings set org.cinnamon panels-height "['1:60']"
 gsettings set org.gnome.desktop.interface clock-format "'12h'"
 gsettings set org.cinnamon.desktop.interface clock-use-24h "false"
+
+#Set up corners
+gsettings set org.cinnamon hotcorner-layout "['expo:true:1000', 'scale:false:0', 'scale:false:0', 'cinnamon-screensaver-command --lock:true:200']"
+
+#Set up screensaver
+gsettings set org.cinnamon.desktop.screensaver lock-delay "uint32 15"
