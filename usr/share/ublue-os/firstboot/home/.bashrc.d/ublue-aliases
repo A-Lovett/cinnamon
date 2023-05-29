@@ -3,6 +3,8 @@ alias google-chrome='flatpak run com.google.Chrome'
 
 alias lock='cinnamon-screensaver-command --lock'
 
+alias ro='rpm-ostree'
+
 #Shortcut for 'docker run -it --rm <image> <optional additional args>
 #Run as 'drun <image> <optional additional args>'
 #Adds the user to the docker group if they are not already a member.
