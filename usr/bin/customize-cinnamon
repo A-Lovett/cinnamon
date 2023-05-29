@@ -68,7 +68,7 @@ gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
 
 dconf write /org/gnome/terminal/legacy/keybindings/new-tab "'<Control>t'"
 dconf write /org/gnome/terminal/legacy/keybindings/close-tab "'<Control>w'"
-dconf write /org/gnome/terminal/legacy/keybindings/detach-tab "'<Control><Super>Down'"
+dconf write /org/gnome/terminal/legacy/keybindings/detach-tab "'<Control><Shift>Down'"
 dconf write /org/gnome/terminal/legacy/keybindings/paste "'<Control>v'"
 dconf write /org/gnome/terminal/legacy/keybindings/close-window "'<Control><Shift>w'"
 dconf write /org/gnome/terminal/legacy/keybindings/next-tab "'<Control>Right'"
