@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.2.0](https://github.com/A-Lovett/cinnamon/compare/v1.1.0...v1.2.0) (2023-06-06)
+
+
+### Features
+
+* added ro for rpm-ostree ([067d15f](https://github.com/A-Lovett/cinnamon/commit/067d15f03713cab2b3a6799b7826536bbe982651))
+* can lock with alias or hot corner ([187cdcf](https://github.com/A-Lovett/cinnamon/commit/187cdcf1346b48e9d3f13e4f8ec3376cd2a86240))
+* changed to using backintime for backup ([adc59ec](https://github.com/A-Lovett/cinnamon/commit/adc59ec81af4fb67db9f99216bcfe1274837baef))
+* updated keybindings ([3441023](https://github.com/A-Lovett/cinnamon/commit/344102330eb40c85e4b87bec5bd061e6b9d8ccab))
+* updates aliases for creating/joining containers ([6c1a51e](https://github.com/A-Lovett/cinnamon/commit/6c1a51e46ca5a99cfb1f3c90e28887c75baa6d7c))
+
+
+### Bug Fixes
+
+* organized panel applets correctly ([4a929be](https://github.com/A-Lovett/cinnamon/commit/4a929beb2cea22071ad277b67544d69432d8924a))
+
 ## [1.1.0](https://github.com/A-Lovett/cinnamon/compare/v1.0.0...v1.1.0) (2023-05-23)
 
 
