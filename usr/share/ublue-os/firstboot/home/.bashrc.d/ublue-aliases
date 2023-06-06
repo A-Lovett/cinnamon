@@ -5,8 +5,10 @@ alias lock='cinnamon-screensaver-command --lock'
 
 alias ro='rpm-ostree'
 
-#Shortcut for 'docker run -it --rm <image> <optional additional args>
-#Run as 'drun <image> <optional additional args>'
+alias info='inxi -Fxpmrz'
+
+#Shortcut for 'docker run -it --rm --name <optional-name> <image> <optional additional args>
+#Run as 'drun <image> <optional-name> <optional additional args>'
 #Adds the user to the docker group if they are not already a member.
 function drun() {
     if ! [ "$(groups | grep docker)" ]; then
@@ -20,9 +22,21 @@ function drun() {
     image=$1
 
     if [ $2 ]; then
-        command=${@:2}
+        name="--name $2"
+    else
+        name=""
+    fi
+
+    if [ $3 ]; then
+        command=${@:3}
     else
         command=/bin/bash
+    fi
+
+    if which nvidia-smi 2> /dev/null; then
+        gpu="--gpus all"
+    else
+        gpu=""
     fi
     
     xhost +
@@ -30,22 +44,62 @@ function drun() {
     docker run -it --rm \
         --privileged \
         --network=host \
+        $name \
+        $gpu \
+        --mount type=bind,source="/tmp/.X11-unix",target=/tmp/.X11-unix \
+        -e DISPLAY=$DISPLAY \
         $image \
         $command \
     
     xhost -
 }
 
-#Shortcut for 'podman run -it --rm <image> <optional additional args>
-#Run as 'prun <image> <optional additional args>'
+#Shortcut for 'docker container exec -it <name> <optional command>'
+#Run as 'djoin <name> <optional command>'
+function djoin {
+    name=$1
+
+     if [ $2 ]; then
+        command=${@:2}
+    else
+        command=/bin/bash
+    fi
+
+    docker container exec -it $name $command
+}
+
+#Shortcut for 'podman run -it --rm --name <optional name> <image> <optional additional args>
+#Run as 'prun <image> <optional name> <optional additional args>'
 function prun() {
     image=$1
 
     if [ $2 ]; then
-        podman run -it --rm $image ${@:2}
+        name="--name $2"
     else
-        podman run -it --rm $image /bin/bash
+        name=""
     fi
+
+    if [ $3 ]; then
+        command=${@:3}
+    else
+        command=/bin/bash
+    fi
+
+    podman run -it --rm $name $image $command
+}
+
+#Shortcut for 'podman container exec -it <name> <optional command>'
+#Run as 'pjoin <name> <optional command>'
+function pjoin {
+    name=$1
+
+     if [ $2 ]; then
+        command=${@:2}
+    else
+        command=/bin/bash
+    fi
+
+    podman container exec -it $name $command
 }
 
 #Shortcut for distrobox create when used to create a non-ubuntu image.
